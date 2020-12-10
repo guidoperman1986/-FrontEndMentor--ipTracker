@@ -1,0 +1,37 @@
+<div class="container">
+
+    <div class="row-top">
+        <div class="content">
+            <div class="content__title">IP Address Tracker</div>
+            <div class="content__search">
+                <input class="content__search--input" type="text" placeholder="Search for any IP address or domain" #ip (keyup.enter)="buscarIP(ip.value)" value="{{ipS}}">
+                <span class="content__search--arrow" (click)="buscarIP(ip.value)"></span>                
+            </div>
+        </div>
+    </div>
+        
+    <div class="ip-details">        
+        <div class="items">
+            <div class="items__cell">
+                <span class="items__cell--titulo">Ip Address</span>
+                <span class="items__cell--detail">{{ ipS }}</span>
+            </div>
+            <div class="items__cell">
+                <span class="items__cell--titulo">Location</span>
+                <span class="items__cell--detail">{{location}}</span>
+            </div>
+            <div class="items__cell">
+                <span class="items__cell--titulo">Timezone</span>
+                <span class="items__cell--detail">{{timezone}}</span>
+            </div>
+            <div class="items__cell">
+                <span class="items__cell--titulo">Isp</span>
+                <span class="items__cell--detail">{{isp}}</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="row-bottom" class="row-bottom"></div>
+</div>
+
+
